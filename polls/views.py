@@ -24,10 +24,10 @@ def recursos(request):
     return HttpResponse("""<p>Qual dado você deseja enviar?</p>
 
 <form>
-  <input type="radio" id="html" name="fav_language" value="HTML">
-  <label for="html">HTML</label><br>
-  <input type="radio" id="css" name="fav_language" value="">
-  <label for="css">CSS</label><br>
-  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-  <label for="javascript">JavaScript</label>
+  <input type="checkbox" id="nome" name="fav_language" value="">
+  <label for="nome">NOME</label><br>
+  <input type="checkbox" id="idade" name="fav_language" value="">
+  <label for="idade">IDADE</label><br>
+  <input type="checkbox" id="email" name="fav_language" placeholder="">
+  <label for="email">EMAIL</label>
 </form>""")

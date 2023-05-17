@@ -18,7 +18,11 @@ def criar(request):
 """)
 
 def cadastro(request):
-    return HttpResponse("Seu cadastro foi finalizado")
+    return HttpResponse("""Seu cadastro foi finalizado
+    <a href="/polls">Ir para a pagina de polls</a>
+
+    """)
+
 
 def recursos(request):
     return HttpResponse("""<p>Qual dado você deseja enviar?</p>

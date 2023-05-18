@@ -5,15 +5,35 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+    return HttpResponse("""<h1>Oba!!!Seu cadastro foi finalizado com sucesso!</h1>
+    <p>Agora é só acompanhar o sorteio semanalmente e torcer!</p>
+    INDICANDO AMIGOS VOCÊ TEM MAIS CHANCE DE SER O PRÓXIMO GANHADOR $$$
+    <h1>BOA SORTE!!!</h1>
+    """)
 
 def criar(request):
-    return HttpResponse("""<form>
-  <label for="fname">First name:</label><br>
+    return HttpResponse("""Preencha com seus dados corretos para não ocasionar em probremas futuros!
+    <hr>
+<form>
+  <label for="fname">Nome*</label><br>
   <input type="text" id="fname" name="fname"><br>
-  <label for="lname">Last name:</label><br>
+  <label for="lname">Sobrenome*</label><br>
   <input type="text" id="lname" name="lname"><br>
-  <input type="submit" value="criar">
+  <label for="e-mail">E-mail*</label><br>
+  <input type="text" id="e-mail" name="e-mail"><br>
+  <label for="senha">Criar Senha*</label><br>
+  <input type="text" id="Senha se acesso" name="Senha"><br
+
+  <p>Deseja receber nossas promoções por e-mail?</p>
+
+  <input type="radio" id="sim" name="fav_lenguage" value="">
+  <label for="sim">SIM</label><br>
+  <input type="radio" id="não" name="fav_language" value="">
+  <label for="não">NÃO<label><br>
+  <hr>
+  <input type="submit" value="Enviar Cadastro">
+
+  <a href="http://127.0.0.1:8000/polls">Clique aqui</a>
 </form>
 """)
 
@@ -35,3 +55,28 @@ def recursos(request):
   <input type="checkbox" id="email" name="fav_language" placeholder="">
   <label for="email">EMAIL</label>
 </form>""")
+
+def exer(request):
+    return HttpResponse("""<title>Parágrafos</title>
+</head>
+<body>
+    <hr>
+    <h1>Jogo da Fortuna$$$</h1>
+    <hr>
+    <p>Cadastre-se e concorra a premios imperdíveis!!!</p>
+
+    Deseja se cadastrar?
+
+<form>
+    <input type="checkbox" id="sim" name="fav_lenguage" value="">
+    <label for="sim">SIM</label><br>
+    <input type="checkbox" id="não" name="fav_language" value="">
+    <label for="não">NÃO<label><br>
+
+    <p>Se você respondeu 'SIM'. Clique no link a seguir:<p>
+
+    <a href="criar">CLIQUE AQUI</a>
+<form>
+
+</body>
+</html>""")

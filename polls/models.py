@@ -35,4 +35,7 @@ class Pet(models.Model):
     tamanho = models.FloatField()
     tipo = models.CharField(max_length=20)
     raca = models.CharField(null=True, max_length=20)
+
+    def __str__(self):
+        return self.tipo
 # Create your models here.

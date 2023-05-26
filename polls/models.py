@@ -23,7 +23,7 @@ class Choice(models.Model):
 class People(models.Model):
     nome = models.CharField(max_length=50)
     idade = models.IntegerField()
-    peso = models.IntegerField()
+    sexo = models.CharField(null=True, max_length= 20)
     data_criacao = models.DateTimeField(auto_now=True)
 
     def __str__(self):
@@ -34,5 +34,5 @@ class Pet(models.Model):
     nome = models.CharField(max_length=30)
     tamanho = models.FloatField()
     tipo = models.CharField(max_length=20)
-    
+    raca = models.CharField(null=True, max_length=20)
 # Create your models here.

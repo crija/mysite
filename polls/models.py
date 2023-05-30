@@ -38,4 +38,14 @@ class Pet(models.Model):
 
     def __str__(self):
         return self.tipo
+
+class Automobile(models.Model):
+    people = models.ForeignKey(People, on_delete=models.CASCADE)
+    tipo = models.CharField(max_length=30)
+    cor = models.CharField(max_length=20)
+    ano = models.CharField(max_length=4)
+
+    def __str__(self):
+        return self.tipo
+
 # Create your models here.

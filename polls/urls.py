@@ -12,7 +12,7 @@ views.detail, name="detail"),
 views.vote, name="results"),
 
     path("<int:question_id>/vote/",
-views.vote, name="vote"),
+views.vote, name="vote"),   
 
     path('criar', views.criar, name='criar'),
 
@@ -23,4 +23,6 @@ views.vote, name="vote"),
     path('exer', views.exer, name='exer'),
 
     path('people', views.exer, name='people'),
+
+    path('people/<int:people_id>', views.view_people, name='dormir'),
 ]

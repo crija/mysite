@@ -101,4 +101,5 @@ def view_people(request, people_id):
 
 def view_pet(request, pet_id):
     animal = Pet.objects.filter(id = pet_id)[0]
-    return HttpResponse(f"O nome do pet com id = {pet_id}, é {animal.nome}, o tamanho é {animal.tamanho}, o tipo é {animal.tipo}")
+    pessoas = People.objects.filter(id = animal.people_id)[0]
+    return HttpResponse(f"O nome do pet com id = {pet_id}, é {animal.nome} é da pessoa com id = {animal.people_id}, é {pessoas.nome}")

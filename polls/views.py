@@ -4,6 +4,10 @@ from django.shortcuts import render
 
 from django.http import HttpResponse
 
+from polls.models import People
+
+from polls.models import Pet
+
 def index(request):
     return HttpResponse("""<h1>Oba!!!Seu cadastro foi finalizado com sucesso!</h1>
     <p>Agora é só acompanhar o sorteio semanalmente e torcer!</p>
@@ -92,4 +96,9 @@ def vote(request, question_id):
     return HttpResponse("You're voting on question %s." % question_id)
 
 def view_people(request, people_id):
-    return HttpResponse("To com sono {}".format(people_id))
+    pessoa = People.objects.filter(id=people_id)[0]
+    return HttpResponse(f"O nome da pessoa de id = {people_id}, é {pessoa.nome} e a idade é {pessoa.idade}")
+
+def view_pet(request, pet_id):
+    animal = Pet.objects.filter(id = pet_id)[0]
+    return HttpResponse(f"O nome do pet com id = {pet_id}, é {animal.nome}, o tamanho é {animal.tamanho}, o tipo é {animal.tipo}")

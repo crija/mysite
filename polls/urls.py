@@ -24,5 +24,8 @@ views.vote, name="vote"),
 
     path('people', views.exer, name='people'),
 
-    path('people/<int:people_id>', views.view_people, name='dormir'),
+    path('people/<int:people_id>', views.view_people, name='pessoas'),
+
+    path('pet/<int:pet_id>', views.view_pet, name='animais'),
+
 ]

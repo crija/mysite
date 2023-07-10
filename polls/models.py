@@ -20,32 +20,3 @@ class Choice(models.Model):
     def __str__(self):
         return self.choice_text
 
-class People(models.Model):
-    nome = models.CharField(max_length=50)
-    idade = models.IntegerField()
-    sexo = models.CharField(null=True, max_length= 20)
-    data_criacao = models.DateTimeField(auto_now=True)
-
-    def __str__(self):
-        return self.nome
-
-class Pet(models.Model):
-    people = models.ForeignKey(People, on_delete=models.CASCADE)
-    nome = models.CharField(max_length=30)
-    tamanho = models.FloatField()
-    tipo = models.CharField(max_length=20)
-    raca = models.CharField(null=True, max_length=20)
-
-    def __str__(self):
-        return self.tipo
-
-class Automobile(models.Model):
-    people = models.ForeignKey(People, on_delete=models.CASCADE)
-    tipo = models.CharField(max_length=30)
-    cor = models.CharField(max_length=20)
-    ano = models.CharField(max_length=4)
-
-    def __str__(self):
-        return self.tipo
-
-# Create your models here.

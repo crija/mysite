@@ -14,18 +14,4 @@ views.vote, name="results"),
     path("<int:question_id>/vote/",
 views.vote, name="vote"),   
 
-    path('criar', views.criar, name='criar'),
-
-    path('criar/cadastro', views.cadastro, name='cadastro'),
-
-    path('cadastro/recursos', views.recursos, name='recursos'),
-
-    path('exer', views.exer, name='exer'),
-
-    path('people', views.exer, name='people'),
-
-    path('people/<int:people_id>', views.view_people, name='pessoas'),
-
-    path('pet/<int:pet_id>', views.view_pet, name='animais'),
-
 ]
